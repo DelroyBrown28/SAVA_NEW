@@ -9,6 +9,7 @@
 
     <form class="testimonial-form" action="/submit-testimonial/" method="POST">
         {{ form.as_ul }}
+        {% csrf_token %}
         <input class="testimonial-form-submit-btn" type="submit">
           </form>
 
