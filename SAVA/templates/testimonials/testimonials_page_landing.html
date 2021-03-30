@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+{% image self.testimonial_thank_you_page_background fill-1920x1080 as bg_img %}
+<div class="thank-you-container bg-image flexed" style="background-image: url('{{ bg_img.url }}');">
+    {{ self.thank_you_text|richtext }}
+
+    <a class="back-home-btn" href="/">⟵</a>
+
+
+</div>
+{% endblock content %}
+    

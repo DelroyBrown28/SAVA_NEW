@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags %}
+
+
+{% block content %}
+<div class="container thank-you-page-container flexed">
+    <h5 class="mt-5 thank-you-text">{{ self.thank_you_text|richtext }}</h5>
+    <a class="back-home-btn" href="/">⟵</a>
+   
+
+</div>
+{% endblock content %}

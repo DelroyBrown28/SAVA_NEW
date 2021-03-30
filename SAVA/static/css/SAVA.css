@@ -1,0 +1,898 @@
+body,
+html {
+    height: 100vh;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    /* overflow: hidden; */
+
+}
+
+::-webkit-scrollbar {
+    visibility: hidden;
+}
+
+.services-section-mobile,
+.services-btn-mobile,
+.line-thing,
+.contact-form-file-upload-btn-mobile,
+.form-intro-text-mobile {
+    display: none !important;
+}
+
+.services-main-title,
+.line-thing {
+    visibility: hidden;
+}
+
+.bg-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100% !important;
+}
+
+.main-footer {
+    height: 64px;
+    width: 100%;
+
+}
+
+/* 
+==============
+LITTLE HELPERS
+==============
+*/
+
+.flexed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redborder {
+    border: 1px solid red;
+}
+
+.blueborder {
+    border: 1px solid blue;
+}
+
+/* 
+=========
+HOME PAGE
+=========
+*/
+
+.home-page-main {
+    height: calc(100vh - 128px);
+    padding: 145px;
+}
+
+.main-page-blurb-actions {
+    height: 100%;
+
+}
+
+.home-page-contents {
+    position: relative;
+    height: calc(100vh - 128px);
+    margin-bottom: 0px;
+
+    width: 100%;
+    z-index: 200;
+}
+
+.logo-img-wrap {
+    height: 100%;
+
+}
+
+
+.top-homepage-blurb,
+.subheading {
+    font-family: 'Yeseva One', cursive;
+}
+
+.top-homepage-blurb {
+    line-height: 90.5%;
+    font-size: 64px;
+
+}
+
+.subheading {
+    text-align: left;
+    line-height: 105% !important;
+    width: 100%;
+    font-size: 25px;
+    opacity: 0.6;
+}
+
+.heading-subheading-wrap p {
+    text-align: left;
+    line-height: 105% !important;
+    width: 100%;
+    font-size: 25px;
+    opacity: 0.8;
+    font-family: 'Yeseva One', cursive;
+
+}
+
+.top-homepage-btn-wrap {
+    width: 100%;
+    z-index: 200;
+
+}
+
+.top-homepage-btns {
+    height: 50px;
+    width: 210px;
+    font-family: 'Yeseva One', cursive;
+    border: none;
+    font-size: 20px;
+
+}
+
+.services-btn {
+    background-color: #333;
+    color: #f7f7f7 !important;
+}
+
+.contact-btn {
+    background-color: transparent;
+    border: 1px solid #333;
+    margin-left: 25px;
+}
+
+.home-page-footer {
+    height: 64px;
+    bottom: 0px;
+    background: #333;
+    backdrop-filter: blur(30px);
+}
+
+
+
+
+/* Navbar */
+
+nav {
+    background: #f9f3f25d;
+    box-shadow: none;
+    width: 100%;
+    backdrop-filter: blur(30px);
+
+
+}
+
+.navbar-row {
+    margin-bottom: 0px;
+}
+
+#nav-mobile>li>a {
+    color: #000;
+}
+
+.btn-to-services {
+    color: #333;
+}
+
+/* 
+================
+SERVICES SECTION
+================
+*/
+
+.services-section {
+    position: absolute;
+    height: calc(100vh - 128px);
+    width: 90%;
+    background-color: #f9f3f232;
+    backdrop-filter: blur(30px);
+    z-index: 200;
+    /* Reset by gsap */
+    visibility: hidden;
+
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.07),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.05),
+        0 12.5px 10px rgba(0, 0, 0, 0.042),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.035),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.028),
+        0 100px 80px rgba(0, 0, 0, 0.02);
+}
+
+.service-cards-wrap {
+    flex-flow: column;
+    width: 100%;
+}
+
+
+.services-container {
+    flex-flow: row;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+
+.services-main-title {
+    text-transform: uppercase;
+}
+
+.service-card {
+    flex-flow: column;
+    height: 500px;
+    width: 25%;
+    justify-content: space-between;
+    border: 1px solid #333;
+
+}
+
+.service-card-title p {
+    font-size: 1.5rem !important;
+}
+
+.service-card p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.service-card-icon-wrap {
+    width: 100%;
+    margin-top: 15px;
+    padding-left: 15px;
+}
+
+.service-card-btns {
+    height: 50px;
+    width: 210px;
+    background-color: #333;
+    color: #f7f7f7;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    font-size: 2rem;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+/* 
+===============
+CONTACT US PAGE
+===============
+*/
+
+.contact-form-container {
+    width: 100%;
+    height: calc(100vh - 128px);
+    margin: 0 !important;
+    flex-flow: column;
+    padding: 15px;
+    /* background-color: #f9f3f252; */
+    /* backdrop-filter: blur(30px); */
+
+}
+
+.show-contact-help-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-color: #333;
+    color: gold;
+    cursor: pointer;
+}
+
+.contact-form-container p {
+    font-size: 18px;
+}
+
+.contact-form {
+    width: 40%;
+}
+
+.contact-form-title {
+    margin-top: 0px;
+}
+
+.contact-form li {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+
+
+.contact-form li span {
+    color: #333;
+    opacity: 0.6;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #333;
+    font-weight: 500;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #333;
+    font-weight: 500;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #333;
+    font-weight: 500;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #333;
+    font-weight: 500;
+}
+
+
+
+
+#id_full_name,
+#id_email,
+#id_contact_number,
+#id_what_can_we_help_you_with {
+    color: #333;
+    padding-left: 5px;
+
+
+}
+
+#id_what_can_we_help_you_with {
+    height: 150px;
+    resize: none;
+    padding: 15px;
+}
+
+.textbox-label {
+    margin-bottom: 10px;
+}
+
+.contact-form-btns-wrap {
+    justify-content: space-between;
+}
+
+.contact-form-submit-btn {
+    height: 50px;
+    width: 45%;
+    font-family: 'Yeseva One', cursive;
+    border: none;
+    background-color: #333;
+    color: #f7f7f7;
+    font-size: 20px;
+
+}
+
+.contact-form-file-upload-btn {
+    height: 50px;
+    width: 45%;
+    font-family: 'Yeseva One', cursive;
+    border: 1px solid #333;
+    background-color: transparent;
+    color: #333;
+    font-size: 20px;
+
+}
+
+.contact-help-info-modal {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 26%;
+    border: 2px solid #333;
+    background-color: #f9f3f232;
+    backdrop-filter: blur(30px);
+    flex-flow: column;
+    z-index: 20;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.07),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.05),
+        0 12.5px 10px rgba(0, 0, 0, 0.042),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.035),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.028),
+        0 100px 80px rgba(0, 0, 0, 0.02);
+
+    /* Reset by gsap */
+    visibility: hidden;
+}
+
+.help-info-close-btn {
+    color: #333;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 2rem;
+
+}
+
+.help-modal-close-btn {
+    height: 50px;
+    width: 210px;
+    border: none;
+    background-color: #333;
+    color: #f7f7f7;
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+
+    visibility: hidden;
+
+
+}
+
+.doc-link {
+    color: #333;
+    font-weight: 600;
+}
+
+.contact-side-wrap {
+    padding: 0 !important;
+    width: 100%;
+}
+
+.contact-form-info-wrap {
+    background-color: #f9f3f252;
+    backdrop-filter: blur(30px);
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+.content-info-blurb {
+    margin: 25px 0px;
+    text-align: center;
+    width: 55%;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+
+    visibility: hidden;
+}
+
+.contact-page-full-container {
+    height: calc(100vh - 128px);
+
+}
+
+.content-info-logo-wrap {
+    width: 100%;
+    height: 10%;
+}
+
+.contact-info-logo {
+    height: 35px;
+
+}
+
+.contact-info-help-list {
+    width: 55%;
+    height: 40%;
+    font-size: 1.1rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column;
+    color: #333;
+
+    visibility: hidden;
+}
+
+
+/* 
+==============
+THANK YOU PAGE
+==============
+*/
+
+.thank-you-page-container {
+    flex-flow: column;
+}
+
+.thank-you-text {
+    text-align: center;
+}
+
+.back-home-btn {
+    font-size: 2rem;
+    margin-top: 25px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+/* 
+=================
+TESTIMONIALS PAGE
+=================
+*/
+
+.testimonials-page-wrap {
+    height: calc(100vh - 128px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100% !important;
+    flex-flow: column;
+
+
+
+}
+
+.testimonial-card-wrap {
+    width: 85%;
+    flex-wrap: wrap;
+    overflow: auto;
+
+}
+
+.testimonial-card {
+    background-color: #f7f7f732;
+    backdrop-filter: blur(30px);
+    border: 1px solid #333;
+    margin: 0px 15px;
+    color: #333;
+    height: 230px;
+    width: 500px;
+    padding: 30px;
+    flex-flow: column;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.07),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.05),
+        0 12.5px 10px rgba(0, 0, 0, 0.042),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.035),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.028),
+        0 100px 80px rgba(0, 0, 0, 0.02);
+
+}
+
+.testimonial-card p {
+    margin: 0;
+}
+
+.quote-icon-wrap {
+    width: 100%;
+}
+
+.leave-message-btn {
+    height: 50px;
+    width: 210px;
+    background-color: #333;
+    color: #f7f7f7;
+    backdrop-filter: blur(30px);
+    /* font-family: 'Yeseva One', cursive; */
+    border: 1px solid #333;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+
+
+/* 
+=================
+TESTIMONIALS FORM
+=================
+*/
+
+.testimonial-page-title {
+    font-weight: 600;
+}
+
+
+.testimonial-form-container {
+    width: 100%;
+    height: calc(100vh - 128px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 !important;
+    flex-flow: column;
+    padding: 15px;
+}
+
+.testimonial-form {
+    width: 40%;
+
+}
+
+.testimonial-form-container p {
+    margin: 15px 0px;
+    text-align: center;
+    width: 40%;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+
+.testimonial-form-container li {
+    list-style: none;
+    margin-bottom: 35px;
+
+
+}
+
+
+#id_thoughts {
+    height: 150px;
+    resize: none;
+    padding: 10px;
+}
+
+.testimonial-form-submit-btn {
+    height: 50px;
+    width: 100%;
+    font-family: 'Yeseva One', cursive;
+    border: none;
+    background-color: #333;
+    color: #f7f7f7;
+    font-size: 20px;
+}
+
+
+/* 
+===========================
+TESTIMONIALS THANK YOU PAGE
+===========================
+*/
+
+.thank-you-container {
+    height: calc(100vh - 128px);
+    width: 100%;
+    flex-flow: column;
+
+}
+
+.thank-you-container p {
+    font-size: 22px;
+}
+
+
+
+/* 
+================
+HOVERS & SUCH...
+================
+*/
+
+.link-hover:hover {
+    background-color: transparent !important;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.back-home-btn:hover {
+    color: #333;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.show-contact-help-btn:hover {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.services-btn:hover {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.services-btn:active {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #333;
+    color: #f7f7f7;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.leave-message-btn:hover {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+/* 
+=============
+MEDIA QUERIES
+=============
+*/
+
+
+@media (max-width : 450px) {
+
+    .logo-img-wrap,
+    .services-section,
+    .services-btn,
+    .close-btn,
+    .contact-form-file-upload-btn,
+    .testimonial-page-title {
+        display: none;
+    }
+
+    .home-page-body {
+        overflow: auto !important;
+    }
+
+
+    .top-homepage-blurb {
+        text-align: center;
+    }
+
+    .heading-subheading-wrap p {
+        font-size: 20px;
+        text-align: center;
+        margin: 35px 0px;
+
+    }
+
+    .top-homepage-btn-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: column;
+        height: 120px;
+
+    }
+
+    .contact-btn {
+        margin: 0;
+    }
+
+    /* Services Section */
+
+
+
+    .services-section-mobile {
+        /* position: relative; */
+        display: flex !important;
+        height: fit-content;
+        width: 100%;
+        margin-top: 100px;
+        overflow: auto;
+    }
+
+    .services-section {
+        display: none;
+    }
+
+    .services-container {
+        flex-flow: column;
+        padding: 20px;
+
+    }
+
+    .services-main-title {
+        text-align: center;
+        font-size: 2.7rem;
+        font-weight: 600;
+        visibility: visible;
+    }
+
+    .service-card {
+        width: 100%;
+        margin: 15px 0px;
+    }
+
+    .services-btn-mobile {
+        display: flex !important;
+        background-color: #333;
+        color: #f7f7f7;
+
+    }
+
+
+    /* Contact form page */
+
+    .form-intro-text-mobile {
+        display: block !important;
+    }
+
+    .contact-form-container p {
+        display: none;
+    }
+
+    .form-intro-text-mobile {
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        margin: 15px 0px;
+    }
+
+    .contact-form {
+        width: 85%;
+    }
+
+    .contact-form li {
+        list-style: none;
+        margin-bottom: 15px;
+    }
+
+    .contact-form-file-upload-btn-mobile {
+        display: flex !important;
+        height: 50px;
+        width: 45%;
+        font-family: 'Yeseva One', cursive;
+        border: 1px solid #333;
+        background-color: transparent;
+        color: #333;
+        font-size: 20px;
+    }
+
+    /* Contact Form Help List */
+
+
+    .contact-info-help-list {
+        width: 100%;
+        height: 65%;
+        font-weight: 400;
+        justify-content: space-around;
+
+    }
+
+    .contact-help-info-modal {
+        overflow: auto;
+        height: calc(100vh - 128px);
+        width: 100% !important;
+        padding: 15px;
+
+    }
+
+    .content-info-blurb {
+        visibility: visible;
+        border: 1px solid red;
+    }
+
+    /* Testimonials Page */
+
+    .testimonial-card-wrap {
+        width: 100%;
+    }
+
+    .testimonials-page-wrap h4,
+    p {
+        text-align: center;
+    }
+
+    .leave-message-btn {
+        height: 200px;
+    }
+
+    /* Testimonials Form Page */
+
+    
+    .testimonial-form-container p {
+        width: 98%;
+    }
+
+    .testimonial-form {
+        width: 95%;
+        height: 100%;
+    
+    }
+
+
+
+
+
+
+}

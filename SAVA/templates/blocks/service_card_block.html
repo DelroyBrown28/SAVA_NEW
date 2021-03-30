@@ -1,0 +1,34 @@
+{% load wagtailimages_tags %}
+
+
+<div class="service-cards-wrap flexed">
+    <h2 class="services-main-title">{{ self.service_title }}</h2>
+
+
+    <div class="services-container flexed">
+    {% for service_card in self.service_cards  %}
+    {% image service_card.service_card_icon fill-30x30 as service_card_icon %}
+
+        <div class="service-card flexed">
+            <div class="service-card-icon-wrap">
+                <img src="{{ service_card_icon.url }}" alt="{{ service_card_icon.alt }}">
+            </div>
+            <h5 class="service-card-title">{{ service_card.service_title }}</h5>
+            <p>{{ service_card.service_item }}</p>
+    
+            {% if service_card.button_page %}
+            <a class="service-card-btns flexed" href="{{ service_card.button_page.url }}">{{ service_card.button_text }}</a>
+            {% elif service_card.button_url %}
+            <a class="service-card-btns flexed" href="{{ service_card.button_url }}">{{ service_card.button_text }}</a>
+            {% endif %}
+    
+        </div>
+
+        
+        {% endfor %}
+        
+    </div>
+    <div class="close-btn">
+        ⟵
+    </div>
+</div>

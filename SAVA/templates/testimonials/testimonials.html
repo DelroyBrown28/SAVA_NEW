@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+
+
+{% block content %}
+{% image self.testimonials_page_background_image fill-1920x1080 as bg_img %}
+<div class="testimonials-page-wrap flexed" style="background-image: url('{{ bg_img.url }}');">
+
+    <h4>{{ self.testimonials_page_title }}</h4>
+    <p>{{ self.testimonials_page_subtitle|richtext }}</p>
+
+    <a href="/submit-testimonial/" class="leave-message-btn flexed mb-4">Drop us a message</a>
+
+    <div class="testimonial-card-wrap flexed">
+        {% for block in page.content  %}
+        {% include_block block %}
+        {% endfor %}
+    </div>
+
+
+</div>
+
+
+
+{% endblock content %}

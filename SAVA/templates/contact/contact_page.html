@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+
+
+<body style="overflow: hidden;">
+    {% image self.contact_page_background_image fill-1920x1080 as bg_img %}
+
+    <div class="bg-image" style="background-image: url('{{ bg_img.url }}');">
+
+
+
+        <div class="row contact-page-full-container">
+
+            <div class="col s12 contact-side-wrap">
+                <div class="flexed contact-form-container" data-aos="fade" data-aos-duration="1500">
+                    {{ self.form_intro|richtext }}
+                    <span class="form-intro-text-mobile">Make your description as detailed as possible.</span>
+                    <div class="show-contact-help-btn flexed">?</div>
+
+                    <div class="contact-help-info-modal flexed">
+
+                        <h3 class="question-mark">?</h3>
+
+                        <p class="content-info-blurb">We’re here to help you, but sometimes it’s difficult to know what
+                            to ask for,
+                            and how to ask for it! Below are a few point’s to make writing your tasks clear and easy for
+                            me
+                            understand and complete.
+                        </p>
+
+                        <ul class="contact-info-help-list">
+                            <li class="help-list">• I can help you with simple, repetitive tasks that take up a lot of
+                                time.</li>
+                            <li class="help-list">• State each task individually with any pointers on how you would like
+                                things
+                                done.</li>
+                            <li class="help-list">• A <a class="doc-link" href="https://creately.com/blog/diagrams/process-documentation-guide/#How"
+                                    target="_blank">process document</a> can really help me get your task
+                                right first
+                                time.</li>
+                            <li class="help-list">• Please be sure to let me know when the work needs to be completed
+                                by.</li>
+                            <li class="help-list">• It’s best to give no more than 3 tasks at a time.</li>
+                            <li class="help-list">• If you struggle explaining by text, fill in your contact details and
+                                request a
+                                call back.</li>
+                            <li class="help-list">• Knowing a bit about your business can really help me tailor my
+                                service to you.
+                            </li>
+                        </ul>
+
+                        <button class="help-modal-close-btn">Close help</button>
+
+                    </div>
+
+
+                    <form class="contact-form aos-init aos-animate" action="/contact-us/" method="POST" data-aos="fade"
+                        data-aos-duration="1800">
+                        <input type="hidden" name="csrfmiddlewaretoken"
+                            value="i4dYfb2Jv7iTHXWAKjGD21uHipEzV1Yn0aNXQsDELwbscTgbPEpfk3EZmMK2zFVE">
+                        {% csrf_token %}
+                        <li>
+                            <input type="text" placeholder="Full Name" name="full_name" maxlength="255" required=""
+                                id="id_full_name">
+                        </li>
+                        <li>
+                            <input type="email" placeholder="Email" name="email" required="" id="id_email">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="Contact Number" name="contact_number" maxlength="255"
+                                required="" id="id_contact_number">
+                        </li>
+                        <li>
+                            <label for="id_what_can_we_help_you_with" class="textbox-label">What can we help you
+                                with?</label>
+
+                            <textarea name="what_can_we_help_you_with" cols="40" rows="10" required=""
+                                id="id_what_can_we_help_you_with">
+                        </textarea>
+                        </li>
+
+
+                        <div class="contact-form-btns-wrap flexed">
+                            <input type="submit" class="contact-form-submit-btn">
+                            <a class="contact-form-file-upload-btn flexed" href="https://www.dropbox.com"
+                                target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Upload your file to our Dropbox account.">
+                                Need to send a file?
+                            </a>
+                            <a class="contact-form-file-upload-btn-mobile flexed" href="https://www.dropbox.com"
+                                target="_blank">
+                                Send file?
+                            </a>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content %}
