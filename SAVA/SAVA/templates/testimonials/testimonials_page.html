@@ -7,7 +7,10 @@
     <h5 class="testimonial-page-title">{{ page.title }}</h5>
     <p class="testimonial-blurb">{{ self.intro|richtext }}</p>
 
-    {{ form.as_ul }}
+    <form class="testimonial-form" action="/submit-testimonial/" method="POST">
+        {{ form.as_ul }}
+        <input class="testimonial-form-submit-btn" type="submit">
+          </form>
 
     
 
