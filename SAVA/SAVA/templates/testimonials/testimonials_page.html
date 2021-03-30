@@ -8,8 +8,8 @@
     <p class="testimonial-blurb">{{ self.intro|richtext }}</p>
 
     <form class="testimonial-form" action="/submit-testimonial/" method="POST">
-        <input type="hidden" name="csrfmiddlewaretoken"
-            value="e2uhokEID0znYNh5SWPElooMPGZyoWoNSHmENtgwPdPgtAmbOB9XLXxmr00CsLdg">
+        <!-- <input type="hidden" name="csrfmiddlewaretoken"
+            value="e2uhokEID0znYNh5SWPElooMPGZyoWoNSHmENtgwPdPgtAmbOB9XLXxmr00CsLdg"> -->
         {% csrf_token %}
         <li>
             <!-- <label for="id_full_name_optional" class="">Full Name</label> -->
