@@ -184,7 +184,7 @@ AWS_STORAGE_BUCKET_NAME = 'sava-bucket'
 AWS_S3_REGION_NAME = 'eu-west-2'
 AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_S3_CUSTOM_DOMAIN = 's3://sava-bucket.s3.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = 'sava-bucket.s3.amazonaws.com'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = False
 
