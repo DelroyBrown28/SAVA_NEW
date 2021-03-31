@@ -75,5 +75,31 @@ ADMIN: ROOT EXPLORER PAGE
 .page-explorer .listing .index .button.bicolor {
     background-color: #333;
     border: 1px solid #f7f7f7;
+    
+}
 
+
+/* 
+==================
+ADMIN: LOG IN PAGE
+==================
+*/
+
+.button-longrunning {
+    background-color: #f7f7f7;
+    color: #333;
+}
+.button-longrunning:hover {
+    transition: 0.3s;
+    background-color: #333;
+    border: 1px solid #f7f7f7;
+    color: #f7f7f7;
+}
+
+.iconfield .input:before {
+    background-color: #333;
+}
+
+input:not([type=submit]) {
+    background-color: #f7f7f7;
 }
