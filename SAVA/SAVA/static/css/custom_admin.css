@@ -49,12 +49,12 @@ ADMIN: INSIDE A PAGE
     background-color: #333;
 }
 
-.home:hover, a:hover {
+/* .home:hover, a:hover {
     background-color: #333 !important;
     color: #f7f7f7 !important;
     opacity: 0.5 !important;
     transition: 0.3s;
-}
+} */
 
 .breadcrumb a,
 .breadcrumb .arrow_right_icon {
@@ -76,6 +76,20 @@ ADMIN: ROOT EXPLORER PAGE
     background-color: #333;
     border: 1px solid #f7f7f7;
     
+}
+
+#main > div > header > div > div.col9 > h1 {
+    font-weight: 100 !important;
+}
+
+header .user-name {
+    font-weight: 300 !important;
+    opacity: 0.7;
+    text-transform: uppercase !important;
+}
+
+.avatar {
+    border-radius: 100% !important;
 }
 
 
