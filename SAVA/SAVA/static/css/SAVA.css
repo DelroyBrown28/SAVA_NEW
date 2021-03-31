@@ -176,6 +176,32 @@ nav {
     color: #333;
 }
 
+.sidenav {
+    flex-flow: column;
+    justify-content: space-evenly;
+    padding: 10px !important;
+
+}
+
+.sidenav li {
+    width: 100%;
+    font-size: 3.5rem;
+    text-align: left;
+    flex-flow: column;
+    background-color: #333;
+}
+
+.sidenav li a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: left;
+    color: #f7f7f7;
+    font-weight: 300;
+
+}
+
+
+
 /* 
 ================
 SERVICES SECTION
@@ -879,7 +905,7 @@ MEDIA QUERIES
 
     /* Testimonials Form Page */
 
-    
+
     .testimonial-form-container p {
         width: 98%;
     }
@@ -887,7 +913,7 @@ MEDIA QUERIES
     .testimonial-form {
         width: 95%;
         height: 100%;
-    
+
     }
 
 
